@@ -1,3 +1,4 @@
+<h1>{{title}}</h1>
 
 <ul>
 	<li *ngFor="let hero of heroes" (click)="onSelect(hero)" >
@@ -5,13 +6,6 @@
 	</li>
 </ul>
 
-<h1>{{title}}</h1>
-<section *ngIf="selectedHero">
-	<h2>{{selectedHero.name}} details!</h2>
-	<div>
-	    <label>id: </label>{{selectedHero.id}}</div>
-	<div>
-	    <label>name: </label>
-	    <input [(ngModel)]="selectedHero.name" placeholder="name">
-	</div>
-</section>
+
+
+<my-hero-detail [hero]="selectedHero"></my-hero-detail>

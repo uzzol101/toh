@@ -4,10 +4,13 @@ import {Hero} from './hero';
 @Component({
 	moduleId:module.id,
 	selector:'my-hero-detail',
-	templateUrl:'hero-detail.component.html'
+	templateUrl:'hero-detial.component.html'
 })
 
 export class HeroDetailComponent{
 
-	
+	@Input()
+	hero:Hero;
+
+	title = "From Herodetailcomponent."
 }
